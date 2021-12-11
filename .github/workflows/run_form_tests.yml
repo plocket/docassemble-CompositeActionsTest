@@ -15,4 +15,8 @@ jobs:
         uses: plocket/ALKiln@v16
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
+          PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
+          PLAYGROUND_PASSWORD: "${{ secrets.PLAYGROUND_PASSWORD }}"
+          PLAYGROUND_ID: "${{ secrets.PLAYGROUND_ID }}"
+          EXTRA_LANGUAGES: "${{ secrets.EXTRA_LANGUAGES }}"
       - run: echo "Finished using composite action"
