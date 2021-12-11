@@ -14,5 +14,5 @@ jobs:
       - id: is_id_needed
         uses: plocket/ALKiln@v16
         with:
-          SERVER_URL: "some server url"
+          SERVER_URL: "${{ secrets.SERVER_URL }}"
       - run: echo "Finished using composite action"
