@@ -12,5 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: is_id_needed
-        uses: plocket/ALKiln@v14
+        uses: plocket/ALKiln@v15
+        with:
+          SERVER_URL: "some server url"
       - run: echo "Finished using composite action"
