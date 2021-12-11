@@ -12,5 +12,5 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - id: is_id_needed
-        uses: plocket/ALKiln@v3.0.4
+        uses: plocket/ALKiln@v3.0.5
       - run: echo "Finished using composite action"
