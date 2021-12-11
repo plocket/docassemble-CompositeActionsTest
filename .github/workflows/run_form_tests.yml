@@ -8,15 +8,23 @@ jobs:
 
   composite-test:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+        
     name: Test composite
     steps:
       - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
       - id: is_id_needed
-        uses: plocket/ALKiln@v27
+        uses: plocket/ALKiln@v28
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
           PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
           PLAYGROUND_PASSWORD: "${{ secrets.PLAYGROUND_PASSWORD }}"
           PLAYGROUND_ID: "${{ secrets.PLAYGROUND_ID }}"
           EXTRA_LANGUAGES: "${{ secrets.EXTRA_LANGUAGES }}"
+      
       - run: echo "Finished using composite action"
