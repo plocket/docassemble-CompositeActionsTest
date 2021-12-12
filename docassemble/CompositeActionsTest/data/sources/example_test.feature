@@ -9,4 +9,3 @@ What specific behavior this file should test
 @example_scenario_tag
 Scenario: Server finishes reloading
   Given I start the interview at "test"
-  And I wait 28 seconds
