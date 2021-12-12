@@ -19,8 +19,8 @@ jobs:
     name: Test composite
     steps:
       - uses: actions/checkout@v2
-      - id: is_id_needed
-        uses: plocket/ALKiln@v37
+      - name: Use ALKiln to run tests
+        uses: plocket/ALKiln@v38
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
           PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
