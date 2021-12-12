@@ -19,7 +19,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - id: is_id_needed
-        uses: plocket/ALKiln@v32
+        uses: plocket/ALKiln@v33
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
           PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
