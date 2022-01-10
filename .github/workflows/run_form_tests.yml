@@ -20,7 +20,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use ALKiln to run tests
-        uses: plocket/ALKiln_action@v50
+        uses: plocket/ALKiln_action@d4f2b02ac74b9b55ccb52f34363d16496456b611
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
           PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
