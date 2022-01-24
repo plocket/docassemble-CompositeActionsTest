@@ -9,3 +9,6 @@ What specific behavior this file should test
 @example_scenario_tag
 Scenario: Server finishes reloading
   Given I start the interview at "test"
+
+Scenario: I log in
+  Given I log in with the email "USER1_EMAIL" and the password "USER1_PASSWORD"
