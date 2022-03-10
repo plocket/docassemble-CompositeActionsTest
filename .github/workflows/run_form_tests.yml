@@ -27,5 +27,6 @@ jobs:
           PLAYGROUND_PASSWORD: "${{ secrets.PLAYGROUND_PASSWORD }}"
           PLAYGROUND_ID: "${{ secrets.PLAYGROUND_ID }}"
           EXTRA_LANGUAGES: "${{ secrets.EXTRA_LANGUAGES }}"
+          DOCASSEMBLE_DEVELOPER_API_KEY: "${{ secrets.DOCASSEMBLE_DEVELOPER_API_KEY }}"
       
       - run: echo "Finished using composite action"
