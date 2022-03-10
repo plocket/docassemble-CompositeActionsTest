@@ -45,7 +45,7 @@ def find_package_data(where='.', package='', exclude=standard_exclude, exclude_d
 setup(name='docassemble.CompositeActionsTest',
       version='0.0.1',
       description=('A docassemble extension.'),
-      long_description='# docassemble.CompositeActionsTest\n\nA docassemble extension.\n\n## Author\n\nmb.restless.tech@gmail.com\n\n',
+      long_description='# docassemble.CompositeActionsTest\r\n\r\nA docassemble extension.\r\n\r\n## Author\r\n\r\nmb.restless.tech@gmail.com\r\n\r\n',
       long_description_content_type='text/markdown',
       author='',
       author_email='example@example.com',
