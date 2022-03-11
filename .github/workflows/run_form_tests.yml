@@ -8,19 +8,22 @@ on:
         description: 'Optional. A list of comma separated language names visible on buttons or links that change the language of the interview. Overrides the EXTRA_LANGUAGES repo secret.'
         default: ''
       tags:
-        description: 'Optional. Use a "tag expression" specify which tagged tests to run (https://cucumber.io/docs/cucumber/api/#tag-expressions)'
+        description: 'Optional. Use a "tag expression" specify which tagged tests to run (https://cucumber.io/docs/cucumber/api/#tag-expressions).'
         default: ''
+      alkiln_version:
+        description: 'Optional. The version of ALKiln to get from npm.'
 
 jobs:
 
   composite-test:
     runs-on: ubuntu-latest
-        
+    
+    # Does all the secret and manual input wrangling need to happen in here instead?
     name: Test composite
     steps:
       - uses: actions/checkout@v2
       - name: Use ALKiln to run tests
-        uses: SuffolkLITLab/ALKiln@c8962bb63f3df0e6dca67a7de76da64daa01b8f5
+        uses: SuffolkLITLab/ALKiln@cc6e5af1b5132bbe79457f1f405e9a6ce7baf6be
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
           PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
@@ -28,5 +31,6 @@ jobs:
           PLAYGROUND_ID: "${{ secrets.PLAYGROUND_ID }}"
           EXTRA_LANGUAGES: "${{ secrets.EXTRA_LANGUAGES }}"
           DOCASSEMBLE_DEVELOPER_API_KEY: "${{ secrets.DOCASSEMBLE_DEVELOPER_API_KEY }}"
+          ALKILN_VERSION: "${{ secrets.ALKILN_VERSION }}"
       
-      - run: echo "Finished using composite action"
+      - run: echo "Finished using ALKiln composite action"
