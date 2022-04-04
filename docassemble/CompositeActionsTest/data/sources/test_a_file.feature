@@ -6,4 +6,5 @@ What specific behavior this file should test:
 
 @fast @loads
 Scenario: Server finishes reloading
+  Given I log in with the email "EMAIL" and the password "PASSWORD"
   Given I start the interview at "actual_file.yml"
