@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use ALKiln to run tests
-        uses: SuffolkLITLab/ALKiln@393_npm
+        uses: SuffolkLITLab/ALKiln@releases/v4
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
           PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
@@ -31,6 +31,6 @@ jobs:
           PLAYGROUND_ID: "${{ secrets.PLAYGROUND_ID }}"
           EXTRA_LANGUAGES: "${{ secrets.EXTRA_LANGUAGES }}"
           DOCASSEMBLE_DEVELOPER_API_KEY: "${{ secrets.DOCASSEMBLE_DEVELOPER_API_KEY }}"
-          ALKILN_VERSION: "${{ secrets.ALKILN_VERSION }}"
+          ALKILN_VERSION: "^4.0.0"
       
       - run: echo "Finished using ALKiln composite action"
