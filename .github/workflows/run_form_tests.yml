@@ -22,6 +22,8 @@ jobs:
     name: Test composite
     steps:
       - uses: actions/checkout@v2
+      - name: Setup tmate session
+        uses: mxschmitt/action-tmate@v3
       - name: Use ALKiln to run tests
         uses: SuffolkLITLab/ALKiln@releases/v4
         with:
