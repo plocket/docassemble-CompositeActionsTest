@@ -22,11 +22,8 @@ jobs:
     name: Test composite
     steps:
       - uses: actions/checkout@v2
-      - run: echo "${{ github.action_path }}"
-      - name: Setup tmate session
-        uses: mxschmitt/action-tmate@v3
       - name: Use ALKiln to run tests
-        uses: SuffolkLITLab/ALKiln@releases/v4
+        uses: SuffolkLITLab/ALKiln@01ca8114c90a2c6040cfab3d87748056e7413842
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
           PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
