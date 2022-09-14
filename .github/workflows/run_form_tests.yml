@@ -23,7 +23,7 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Use ALKiln to run tests
-        uses: SuffolkLITLab/ALKiln@fa962fb38a9d56b0903f36dbc6a310c573466538
+        uses: SuffolkLITLab/ALKiln@264dadb2d79c97a5be811d4c6543ac5762ae9b60
         with:
           SERVER_URL: "${{ secrets.SERVER_URL }}"
           PLAYGROUND_EMAIL: "${{ secrets.PLAYGROUND_EMAIL }}"
